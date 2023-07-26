@@ -51,16 +51,32 @@ function render(variables = {}) {
           </h3>
           <ul class=${variables.socialMediaPosition}>
             <li>
-            <a href=${variables.twitter}><i class="fab fa-twitter"></i></a>
+            ${
+              variables.twitter
+                ? `<a href=${variables.twitter}><i class="fab fa-twitter"></i></a>`
+                : ""
+            }
             </li>
             <li>
-            <a href=${variables.github}><i class="fab fa-github"></i></a>
+            ${
+              variables.github
+                ? `<a href=${variables.github}><i class="fab fa-github"></i></a>`
+                : ""
+            }
             </li>
             <li>
-            <a href=${variables.linkedin}><i class="fab fa-linkedin"></i></a>
+            ${
+              variables.linkedin
+                ? `<a href=${variables.linkedin}><i class="fab fa-linkedin"></i></a>`
+                : ""
+            }
             </li>
             <li>
-            <a href=${variables.instagram}><i class="fab fa-instagram"></i></a>
+            ${
+              variables.instagram
+                ? `<a href=${variables.instagram}><i class="fab fa-instagram"></i></a>`
+                : ""
+            }
             </li>
           </ul>
         </div>
@@ -82,7 +98,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: null,
     linkedin: null,
     instagram: null,
     name: null,
